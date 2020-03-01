@@ -1,0 +1,3 @@
+Mahasiswa	nim	 	nama	 	alamat	 	ipk
+MataKuliah 	kode 		nama 		sks
+Registrasi 	nim 		kode semester 	tahun_ajar 	nilai

@@ -1,0 +1,36 @@
+Query : SELECT id_pelanggan, nama_pelanggan FROM pelanggan WHERE id_pelanggan = 190;
+PROJECTION id_pelanggan, nama_pelanggan -- on the fly
+SELECTION id_pelanggan = 190 -- A2
+pelanggan
+Cost : 3block
+
+Query : SELECT id_pelanggan, nama_pelanggan FROM pelanggan JOIN sewa USING (id_pelanggan);
+PROJECTION id_pelanggan, nama_pelanggan -- on the fly
+	JOIN pelanggan.id_pelanggan == sewa.id_pelanggan -- BNLJ
+sewa	pelanggan
+Cost (worst case) : 3128 block
+
+Query : SELECT ID_PELANGGAN, NAMA_PELANGGAN FROM PELANGGAN WHERE ID_PELANGGAN = 190;
+PROJECTION ID_PELANGGAN, NAMA_PELANGGAN -- on the fly
+SELECTION ID_PELANGGAN = 190 -- A2
+pelanggan
+Cost : 3 block
+
+Query : SELECT ID_PELANGGAN, NAMA_PELANGGAN FROM PELANGGAN JOIN SEWA USING (ID_PELANGGAN);
+PROJECTION ID_PELANGGAN, NAMA_PELANGGAN -- on the fly
+	JOIN PELANGGAN.ID_PELANGGAN == SEWA.ID_PELANGGAN -- BNLJ
+SEWA	PELANGGAN
+Cost (worst case) : 3128 block
+
+Query : SELECT ID_PELANGGAN, NAMA_PELANGGAN FROM PELANGGAN WHERE ID_PELANGGAN = 190;
+PROJECTION ID_PELANGGAN, NAMA_PELANGGAN -- on the fly
+SELECTION ID_PELANGGAN = 190 -- A2
+PELANGGAN
+Cost : 3 block
+
+Query : SELECT ID_PELANGGAN, NAMA_PELANGGAN FROM PELANGGAN JOIN SEWA USING (ID_PELANGGAN);
+PROJECTION ID_PELANGGAN, NAMA_PELANGGAN -- on the fly
+	JOIN PELANGGAN.ID_PELANGGAN == SEWA.ID_PELANGGAN -- BNLJ
+SEWA	PELANGGAN
+Cost (worst case) : 3128 block
+

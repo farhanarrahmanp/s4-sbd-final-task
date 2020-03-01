@@ -1,0 +1,4 @@
+P 4 B 8192 # # # # # # #
+Pelanggan id_pelanggan nama_pelanggan noHP_pelanggan alamat_pelanggan R 8 n 10000 V 12
+Mobil id_mobil jenis_mobil no_polisi harga_sewa R 4 n 1500 V 10
+Sewa id_sewa id_pelanggan id_mobil biaya_sewa R 2 n 1000 V 7
